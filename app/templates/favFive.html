@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="{{ url_for ('static', filename='main.css')}}">
+<title>Fav Artist</title>
+</head>
+<body>
+  <a href="/index">Go Back</a>
+
+  {% for x in names %}
+  {% if x['name'] == 'Tim Burton' %}
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card text-center">
+            <img src="{{ x['img'] }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ x['name'] }}</h5>
+              <p class="card-text">{{ x.art }}</p>
+            </div>
+          </div>
+        </div>
+      {% elif x['name'] == 'Eiichiro Oda' %}
+        <div class="col">
+          <div class="card text-center">
+            <img src="{{ x['img'] }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ x['name'] }}</h5>
+              <p class="card-text">{{ x.art }}</p>
+            </div>
+          </div>
+        </div>
+      {% elif x['name'] == 'Junji Ito' %}
+        <div class="col">
+          <div class="card text-center">
+            <img src="{{ x['img'] }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ x['name'] }}</h5>
+              <p class="card-text">{{ x.art }}</p>
+            </div>
+          </div>
+        </div>
+      {% elif x['name'] == 'Hayao Miyazaki' %}
+        <div class="col">
+          <div class="card text-center">
+            <img src="{{ x['img'] }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ x['name'] }}</h5>
+              <p class="card-text">{{ x.art }}</p>
+            </div>
+          </div>
+        </div>
+      {% elif x['name'] == 'Salvador Dali' %}
+        <div class="col">
+          <div class="card text-center">
+            <img src="{{ x['img'] }}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ x['name'] }}</h5>
+              <p class="card-text">{{ x.art }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+  {% endfor %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
